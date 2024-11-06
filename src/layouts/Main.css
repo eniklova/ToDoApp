@@ -1,0 +1,70 @@
+body {
+  background-color: #A0C9D9; 
+  margin: 0;
+  padding: 0;
+}
+
+
+main {
+  background-color: #A0C9D9; 
+    border-radius: 10px; 
+}
+
+/* Nastavenie pozadia pre row a col vo vnútri main */
+.container .row .col {
+  background-color: #A0C9D9; /* Farba pozadia aj pre jednotlivé stĺpce */
+  min-height: 500px; /* Minimálna výška pre každý stĺpec */
+  border: 2px solid #ccc; /* Pevný okraj pre každý stĺpec */
+  padding: 20px; /* Padding okolo obsahu */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+
+/* Styling pre jednotlivé úlohy v stĺpci */
+.task-column {
+  background-color: #A0C9D9; /* Rovnaká farba pozadia pre úlohy */
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+  margin-bottom: 15px; /* Medzera medzi úlohami */
+}
+
+.task-column h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #034159; /* Farba pre nadpisy v stĺpcoch */
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ccc;
+}
+
+.task {
+  background-color: #ffffff; /* Pozadie pre úlohy, aby boli oddelené od pozadia */
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+  margin-top: 10px; /* Medzera medzi úlohami */
+}
+
+.task p {
+  margin: 5px 0;
+}
+
+.task button {
+  margin-top: 10px;
+  background-color: #034159;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.task button:hover {
+  background-color: #F2A2DD;
+  transition: 0.3s;
+}
+
+
+

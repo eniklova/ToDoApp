@@ -1,0 +1,118 @@
+.modal-dialog {
+    max-width: 800px; 
+    margin: 1.75rem auto; 
+    font-family: "Outfit", sans-serif;
+}
+
+.modal-title {
+    text-align: center;
+    width: 100%; /* Zabezpečí, aby bol text centrovaný */
+    font-size: 1.5rem;
+}
+
+.modal-header {
+    background-color: #5da1bc; /* Modrá farba pozadia hlavičky */
+    color: #ffffff; /* Biela farba textu v hlavičke */
+}
+
+.modal-header .btn-close {
+    filter: invert(1); /* Uprav tlačidlo na biele */
+}
+
+.modal-body {
+    background-color: #ffffff; /* Svetlošedá farba pozadia tela */
+    color: #5da1bc; /* Tmavosivá farba textu */
+}
+
+.task-form {
+    background-color: #ffffff; /* Biele pozadie */
+    border-radius: 8px; 
+    padding: 10px; /* Vnútorné okraje */
+    box-shadow: 0 4px 15px rgba(30, 133, 154, 0.3); 
+    max-width: 800px; 
+    margin: auto; 
+}
+
+.task-form .form-group {
+    margin-bottom: 10px; /* Medzera medzi jednotlivými poliami */
+}
+
+.form-group-priority {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Zarovná tlačidlá do stredu */
+    margin-top: 15px;
+}
+
+.form-group-priority label {
+    margin-right: 10px; /* Medzera medzi textom a tlačidlami */
+    text-align: center; /* Centrovanie textu Priorita */
+}
+
+.task-form label {
+    font-size: 1.2rem; /* Zvýšenie veľkosti písma pre popisky */
+    color: #5da1bc;
+    font-weight: 500;
+}
+
+.task-form .form-control {
+    font-size: 1rem; /* Veľkosť písma pre vstupné polia */
+    padding: 5px; /* Vnútorné okraje vo vstupných poliach */
+}
+
+.task-form .btn {
+    font-size: 1rem; /* Veľkosť písma pre tlačidlá */
+    padding: 5px 10px; /* Vnútorné okraje pre tlačidlá */
+    margin-right: 15px;
+}
+
+.task-form .btn-primary,
+.task-form .btn-outline-primary {
+    background-color: #5da1bc; /* Nastavená farba pozadia */
+    color: #ffffff; /* Farba textu */
+    border-color: #5da1bc; /* Okraj rovnakej farby */
+    margin-right: 5px;
+    transition: background-color 0.3s ease; /* Pre plynulý hover efekt */
+}
+
+.task-form .btn-primary:hover,
+.task-form .btn-outline-primary:hover {
+    background-color: #468999; /* Tmavší odtieň pri hover */
+    border-color: #468999;
+    color: #ffffff;
+}
+
+.priority-btn {
+    /* Tlačidlá priorít */
+}
+
+.priority-btn.active {
+    background-color: #468999; /* Tmavší odtieň pre aktívne tlačidlo */
+    border-color: #468999;
+    color: #ffffff;
+}
+
+.task-form-footer {
+    display: flex;
+    justify-content: space-between; /* Tlačidlá zarovnané vľavo a vpravo */
+}
+
+.task-form .btn-success {
+    background-color: #034159; /* Počiatočná farba */
+    border-color: #034159;
+    transition: background-color 0.3s ease; /* Efekt prechodu pri hover */
+}
+
+.task-form .btn-success:hover {
+    background-color: #04658d; /* Nová farba pri hover */
+    border-color: #04658d;
+    color: #ffffff; /* Farba textu */
+}
+
+/* Efekt hover pre tlačidlo "Pridať úlohu" */
+.btn-success:hover {
+    background-color: #04658d;
+    color: #ffffff;
+    border-color: #04658d;
+    transition: background-color 0.3s ease;
+}

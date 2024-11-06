@@ -1,0 +1,56 @@
+main {
+    background-color: #034159; /* Tmavšia modrá farba pre hlavný obsah */
+    padding: 20px;
+}
+
+/* Štýl pre každý stĺpec */
+.col {
+    border: 2px solid black; /* Pevný rámik okolo stĺpca */
+    padding: 10px;
+    min-height: 300px; /* Minimálna výška pre každý stĺpec */
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box; /* Aby padding bol zahrnutý v celkových rozmeroch */
+    margin-bottom: 10px; /* Aby bol medzi stĺpcami malý medzerový priestor */
+}
+
+/* Pevný rámik pre názov stĺpca */
+.task-column h3 {
+    margin: 0;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid black; /* Okraje zo všetkých strán */
+    background-color: #f8f9fa; /* Svetlá farba pozadia pre názov stĺpca */
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    min-height: 50px; /* Pevná výška pre názov stĺpca */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Štýl pre každý riadok úlohy */
+.task-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 2px solid black; /* Okraj pre každý riadok úlohy */
+    box-sizing: border-box;
+    min-height: 50px; /* Minimálna výška riadku */
+}
+
+/* Prázdny riadok, keď nie sú žiadne úlohy */
+.task-row.empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #aaa;
+    padding: 20px;
+    font-style: italic;
+}
+
+/* Zabezpečí, že každý nový riadok s úlohou bude mať svoj rámik */
+.task-row + .task-row {
+    border-top: 2px solid black; /* Pridá rámik nad nový riadok */
+}

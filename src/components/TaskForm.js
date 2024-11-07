@@ -1,4 +1,4 @@
-// src/components/TaskForm.js
+//Komponenta TaskForm slúži na zobrazenie formulára pre pridanie novej úlohy do zoznamu úloh
 import React from 'react';
 import './TaskForm.css'; 
 import useTask from '../hooks/useTask';

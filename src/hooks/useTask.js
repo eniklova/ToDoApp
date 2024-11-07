@@ -1,3 +1,4 @@
+//hook spravuje tri hlavné hodnoty: názov tasku, detail tasku a prioritu tasku, ich zmenu a reset stavu
 import { useState } from 'react';
 
 

@@ -1,30 +1,35 @@
-// src/layouts/Main.js
 import React, { useState } from 'react';
 import TaskForm from '../components/TaskForm';
 import TaskList from '../components/TaskList';
 import { Modal } from 'react-bootstrap';
-import './Main.css'; 
+import './Main.css';
 
 const Main = ({ showModal, handleCloseModal }) => {
     const [tasks, setTasks] = useState([]);
 
     const addTask = (task) => {
-        setTasks(prevTasks => [
-            ...prevTasks, 
-            { ...task, status: 'To do', index: prevTasks.length }
-        ]);
+        const newTask = { ...task, status: 'To do', id: Date.now() }; 
+        setTasks(prevTasks => [...prevTasks, newTask]);
     };
 
-    const moveTask = (index, newStatus) => {
+    const moveTask = (id, newStatus) => {
+        console.log('Moving task with ID:', id, 'to status:', newStatus);  // Logovanie pri presune úlohy
+        setTasks(prevTasks => 
+            prevTasks.map(task => 
+                task.id === id ? { ...task, status: newStatus } : task
+            )
+        );
+    };
+
+    const deleteTask = (id) => {
+        setTasks(prevTasks => prevTasks.filter(task => task.id !== id));
+    };
+
+    const repeatTask = (task) => {
+        const newTask = { ...task, id: Date.now(), status: 'To do' };
         setTasks(prevTasks => {
-            const updatedTasks = [...prevTasks];
-            updatedTasks[index] = { ...updatedTasks[index], status: newStatus };
-            return updatedTasks;
+            return prevTasks.filter(t => t.id !== task.id).concat(newTask);
         });
-    };
-
-    const deleteTask = (index) => {
-        setTasks(prevTasks => prevTasks.filter((_, i) => i !== index));
     };
 
     return (
@@ -40,13 +45,13 @@ const Main = ({ showModal, handleCloseModal }) => {
 
             <div className="row">
                 <div className="col border p-3">
-                    <TaskList tasks={tasks} status="To do" onMoveTask={moveTask} onDeleteTask={deleteTask} />
+                    <TaskList tasks={tasks} status="To do" MoveTask={moveTask} DeleteTask={deleteTask} RepeatTask={repeatTask} />
                 </div>
                 <div className="col border p-3">
-                    <TaskList tasks={tasks} status="In progress" onMoveTask={moveTask} onDeleteTask={deleteTask} />
+                    <TaskList tasks={tasks} status="In progress" MoveTask={moveTask} DeleteTask={deleteTask} RepeatTask={repeatTask} />
                 </div>
                 <div className="col border p-3">
-                    <TaskList tasks={tasks} status="Done" onMoveTask={moveTask} onDeleteTask={deleteTask} />
+                    <TaskList tasks={tasks} status="Done" MoveTask={moveTask} DeleteTask={deleteTask} RepeatTask={repeatTask} />
                 </div>
             </div>
         </main>

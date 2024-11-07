@@ -1,35 +1,25 @@
+//komponenta TaskList zobrazuje zoznam úloh podľa ich stavu
 import React from 'react';
 import TaskItem from './TaskItem';
 
-const TaskList = ({ tasks, status, onMoveTask, onDeleteTask }) => {
-    const filteredTasks = tasks.filter(task => task.status === status);
-
-    return (
-        <div className="col task-column">
-            <h3>{status}</h3>
-            {filteredTasks.length > 0 ? (
-                filteredTasks.map((task, index) => (
-                    <TaskItem
-                        key={task.index}
-                        task={task}
-                        onMoveTask={(newStatus) => onMoveTask(index, newStatus)}
-                        onDelete={() => onDeleteTask(index)}
-                    />
-                ))
-            ) : (
-                <div className="task-row empty">Žiadne úlohy</div> // Zobrazí text, ak sú úlohy prázdne
-            )}
-        </div>
-    );
-};
+const TaskList = ({ tasks, status, MoveTask, DeleteTask, RepeatTask }) => (
+    <div>
+        <h3>{status}</h3>
+        {tasks
+            .filter(task => task.status === status)
+            .map(task => (
+                <TaskItem
+                    key={task.id}
+                    task={task}
+                    onMoveTask={(newStatus) => MoveTask(task.id, newStatus)}
+                    onDelete={() => DeleteTask(task.id)} 
+                    onRepeatTask={() => RepeatTask(task)}  
+                />
+            ))}
+    </div>
+);
 
 export default TaskList;
-
-
-
-
-
-
 
 
 

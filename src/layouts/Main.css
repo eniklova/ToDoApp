@@ -1,56 +1,50 @@
 body {
-  background-color: #A0C9D9; 
+  background-color: #A0C9D9;
   margin: 0;
   padding: 0;
 }
-
-
 main {
-  background-color: #A0C9D9; 
-    border-radius: 10px; 
+  background-color: #A0C9D9;
+  border-radius: 10px;
 }
-
-/* Nastavenie pozadia pre row a col vo vnútri main */
 .container .row .col {
-  background-color: #A0C9D9; /* Farba pozadia aj pre jednotlivé stĺpce */
-  min-height: 500px; /* Minimálna výška pre každý stĺpec */
-  border: 2px solid #ccc; /* Pevný okraj pre každý stĺpec */
-  padding: 20px; /* Padding okolo obsahu */
+  background-color: #034159;
+  min-height: 500px;
+  border: none;
+  padding: 5px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   box-sizing: border-box;
+  border-radius: 10px; 
 }
-
-/* Styling pre jednotlivé úlohy v stĺpci */
 .task-column {
-  background-color: #A0C9D9; /* Rovnaká farba pozadia pre úlohy */
-  padding: 10px;
+  background-color: #A0C9D9;
+  padding: 5px;
   border-radius: 5px;
-  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
-  margin-bottom: 15px; /* Medzera medzi úlohami */
-}
-
-.task-column h3 {
-  text-align: center;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
   margin-bottom: 15px;
-  color: #034159; /* Farba pre nadpisy v stĺpcoch */
-  padding-bottom: 10px;
-  border-bottom: 2px solid #ccc;
 }
-
+.task-column h3 {
+  text-align: center; 
+  font-size: 1.5em; 
+  color: #FFFFFF; 
+  margin: 0; 
+  padding-bottom: 5px; 
+  border-bottom: 3px solid #A0C9D9; 
+}
 .task {
-  background-color: #ffffff; /* Pozadie pre úlohy, aby boli oddelené od pozadia */
+  background-color: #A0C9D9;
   padding: 10px;
   border-radius: 5px;
-  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
-  margin-top: 10px; /* Medzera medzi úlohami */
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+  text-align: center;
+  position: relative;
 }
-
 .task p {
   margin: 5px 0;
 }
-
 .task button {
   margin-top: 10px;
   background-color: #034159;
@@ -60,11 +54,68 @@ main {
   border-radius: 5px;
   cursor: pointer;
 }
-
-.task button:hover {
-  background-color: #F2A2DD;
-  transition: 0.3s;
+.task-buttons .center-button {
+  background-color: #034159;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
 }
+.delete-button {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.task-buttons .delete-button {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+.container .row .col {
+  background-color: #034159;
+  min-height: 500px;
+  border: none;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.container {
+  border-radius: 10px;
+  overflow: hidden; 
+}
+.col h3 {
+  text-align: center; 
+  font-size: 1.5em;
+  color: #FFFFFF; 
+  margin: 0; 
+  padding-bottom: 5px; 
+  border-bottom: 3px solid #A0C9D9; 
+}
+.repeat-button {
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px; 
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.repeat-button:hover {
+  background-color: #218838; 
+}
+
+
+
+
 
 
 

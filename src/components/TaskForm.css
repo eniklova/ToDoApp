@@ -1,0 +1,107 @@
+.modal-dialog {
+    max-width: 800px; 
+    margin: 1.75rem auto; 
+    font-family: "Outfit", sans-serif;
+}
+.modal-title {
+    text-align: center;
+    width: 100%; 
+    font-size: 1.5rem;
+}
+
+.modal-header {
+    background-color: #5da1bc; 
+    color: #ffffff; 
+}
+
+.modal-header .btn-close {
+    filter: invert(1); 
+}
+
+.modal-body {
+    background-color: #ffffff; 
+    color: #5da1bc; 
+}
+
+.task-form {
+    background-color: #ffffff; 
+    border-radius: 8px; 
+    padding: 10px; 
+    box-shadow: 0 4px 15px rgba(30, 133, 154, 0.3); 
+    max-width: 800px; 
+    margin: auto; 
+}
+
+.task-form .form-group {
+    margin-bottom: 10px; 
+}
+
+.form-group-priority {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin-top: 15px;
+}
+
+.form-group-priority label {
+    margin-right: 10px; 
+    text-align: center; 
+}
+
+.task-form label {
+    font-size: 1.2rem; 
+    color: #5da1bc;
+    font-weight: 500;
+}
+
+.task-form .form-control {
+    font-size: 1rem; 
+    padding: 5px; 
+}
+
+.task-form .btn {
+    font-size: 1rem; 
+    padding: 5px 10px; 
+    margin-right: 15px;
+}
+
+.task-form .btn-primary,
+.task-form .btn-outline-primary {
+    background-color: #5da1bc; 
+    color: #ffffff; 
+    border-color: #5da1bc; 
+    margin-right: 5px;
+    transition: background-color 0.3s ease; 
+}
+
+.task-form .btn-primary:hover,
+.task-form .btn-outline-primary:hover {
+    background-color: #468999; 
+    border-color: #468999;
+    color: #ffffff;
+}
+.priority-btn.active {
+    background-color: #468999; 
+    border-color: #468999;
+    color: #ffffff;
+}
+.task-form-footer {
+    display: flex;
+    justify-content: space-between; 
+}
+.task-form .btn-success {
+    background-color: #034159; 
+    border-color: #034159;
+    transition: background-color 0.3s ease; 
+}
+.task-form .btn-success:hover {
+    background-color: #04658d; 
+    border-color: #04658d;
+    color: #ffffff; 
+}
+.btn-success:hover {
+    background-color: #04658d;
+    color: #ffffff;
+    border-color: #04658d;
+    transition: background-color 0.3s ease;
+}

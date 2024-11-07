@@ -1,0 +1,46 @@
+main {
+    background-color: #034159; 
+    padding: 20px;
+}
+.col {
+    border: 2px solid black; 
+    padding: 10px;
+    min-height: 300px; 
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box; 
+    margin-bottom: 10px; 
+}
+.task-column h3 {
+    margin: 0;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid black; 
+    background-color: #f8f9fa; 
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    min-height: 50px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.task-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 2px solid black; 
+    box-sizing: border-box;
+    min-height: 50px; 
+}
+.task-row.empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #aaa;
+    padding: 20px;
+    font-style: italic;
+}
+.task-row + .task-row {
+    border-top: 2px solid black; 
+}

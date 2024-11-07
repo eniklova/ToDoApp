@@ -1,0 +1,24 @@
+.header-custom {
+    background-color: #F2A2DD; 
+    padding-bottom: 110px; 
+    min-height: 220px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-custom .btn {
+    background-color: transparent; 
+    border: none;
+    color: #034159; 
+    padding: 0; 
+    cursor: pointer; 
+    font-size: 100px;
+    transition: transform 0.3s ease; 
+}
+
+.header-custom .btn:hover {
+    color: #FF69B4; 
+    transform: scale(1.1); 
+}

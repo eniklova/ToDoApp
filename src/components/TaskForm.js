@@ -52,19 +52,19 @@ const TaskForm = ({ onTaskSubmit, onClose }) => {
                     <button 
                         type="button" 
                         className={`btn ${priority === 'low' ? 'btn-primary' : 'btn-outline-primary'}`} 
-                        onClick={() => handlePriorityChange('low')}
+                        onClick={() => handlePriorityChange('Nízka')}
                     >    Nízka
                     </button>
                     <button 
                         type="button" 
                         className={`btn ${priority === 'medium' ? 'btn-primary' : 'btn-outline-primary'}`} 
-                        onClick={() => handlePriorityChange('medium')}                    >
+                        onClick={() => handlePriorityChange('Stredná')}                    >
                         Stredná
                     </button>
                     <button 
                         type="button" 
                         className={`btn ${priority === 'high' ? 'btn-primary' : 'btn-outline-primary'}`} 
-                        onClick={() => handlePriorityChange('high')}                    >
+                        onClick={() => handlePriorityChange('Vysoká')}                    >
                         Vysoká
                     </button>
                 </div>
